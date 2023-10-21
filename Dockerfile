@@ -4,14 +4,14 @@ FROM node:16
 # Create the application directory
 WORKDIR  usr/src/app
 
-# Copy package.json and package-lock.json to the container
-# COPY package*.json ./
+ Copy package.json and package-lock.json to the container
+ COPY package*.json ./
 
-# Install Angular CLI globally
-# RUN npm install -g @angular/cli
+ Install Angular CLI globally
+ RUN npm install -g @angular/cli
 
-# # Install project dependencies
-# RUN npm install
+  #Install project dependencies
+ RUN npm install
 
 # Copy the entire project's source code to the container
 COPY  --from=node /app/dist/app/usr/share/nginx/html
